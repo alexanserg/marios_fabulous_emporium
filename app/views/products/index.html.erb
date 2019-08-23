@@ -1,26 +1,52 @@
 <h1>Products for Sale</h1>
 
+<h2>The most reviewed product: </h2>
+
+<% if @most_reviewed_product.any? %>
+<ul>
+  <% @most_reviewed_product.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>Please add reviews to your favorite products.</p>
+<% end %>
+
 <h2>American Products:</h2>
 
 <% if @amer_products.any? %>
-  <ul>
-    <% @amer_products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
+<ul>
+  <% @amer_products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
 <% else %>
-  <p>There are no American products yet.</p>
+<p>There are no American products yet.</p>
 <% end %>
+
+<h3>The three most recently added products:</h3>
+<h4> <% if @recent_products.any? %></h4>
+<ul>
+  <% @recent_products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no recent products yet.</p>
+<% end %>
+
+
+
 
 <h2>All products:</h2>
 <% if @products.any? %>
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
+<ul>
+  <% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
 <% else %>
-  <p>There are no products yet.</p>
+<p>There are no products yet.</p>
 <% end %>
 
 
