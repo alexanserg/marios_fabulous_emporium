@@ -2,7 +2,7 @@
 ## Written by Alexander Sergejev
 
 ### Description:
-_This application allows the addition of products with attributes "name," "cost," and "country of origin." It further has a child element of reviews that be added by customers. Reviews contain the name of the author, the a written reviews of between 50 and 250 characters and a rating from one to five.
+_This application allows the addition of products with attributes "name," "cost," and "country of origin." It further has a child element of reviews that can be added by customers. Reviews contain the name of the author, the a written reviews of between 50 and 250 characters and a rating from one to five.
 for testing purposes it uses the faker gem to fill out the database._
 
 ### Setup:
