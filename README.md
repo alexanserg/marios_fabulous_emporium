@@ -8,11 +8,11 @@ for testing purposes it uses the faker gem to fill out the database._
 ### Setup:
 * Clone the repository found at https://github.com/alexanserg/marios_fabulous_emporium.git
 * In the terminal run the following commands
-** bundle
-** rake db:create
-** rake db:migrate
-** rake db:seed
-** rails s
+$ bundle
+$ rake db:create
+$ rake db:migrate
+$ rake db:seed
+$ rails s
 * open the application in the browser at localhost:3000
 
 
