@@ -1,5 +1,18 @@
 <h1>Products for Sale</h1>
 
+<h2>American Products:</h2>
+
+<% if @amer_products.any? %>
+  <ul>
+    <% @amer_products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no American products yet.</p>
+<% end %>
+
+<h2>All products:</h2>
 <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>
