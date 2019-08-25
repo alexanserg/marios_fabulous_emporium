@@ -12,9 +12,13 @@ describe "the add a product process" do
     expect(page).to have_content 'Giant Candy Bar'
   end
 
-  # it "gives an error when no name is entered" do
-  #   visit new_album_path
-  #   click_on 'Create Album'
-  #   expect(page).to have_content "Name can't be blank"
-  # end
+  it "gives an error when paramaters are not properly entered" do
+    visit products_path
+    click_link 'Create new product'
+    click_on 'Create Product'
+    expect(page).to have_content "Name can't be blank"
+    expect(page).to have_content "Cost can't be blank"
+    expect(page).to have_content "Cost is not a number"
+    expect(page).to have_content "Country of origin can't be blank"
+  end
 end
