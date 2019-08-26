@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# must create 4 products to avoid ambiguity for link due to layout of products index
+
 describe "the add a review process" do
   it "adds a new review" do
     visit products_path
